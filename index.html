@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio pribadi mahasiswa Teknologi Informasi dan fitur To-Do List dalam satu halaman."
+    />
+    <title>Muhammad Hariri | Portfolio & To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav-wrap">
+        <a href="#portfolio" class="brand" aria-label="Beranda">Muhammad Hariri</a>
+
+        <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Ganti tema">
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <nav class="nav" aria-label="Navigasi utama">
+            <a href="#portfolio" class="nav-link active">Portfolio</a>
+            <a href="#todo" class="nav-link">To-Do List</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+          <div class="hero">
+            <div class="hero-content">
+              <span class="eyebrow">Mahasiswa Teknologi Informasi</span>
+              <h1>Muhammad Hariri</h1>
+              <p class="hero-text">
+                Saya adalah mahasiswa Teknologi Informasi yang tertarik pada
+                teknologi, programming, pengembangan web, serta penggunaan AI untuk
+                menciptakan solusi yang bermanfaat dan inovatif.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">Lihat Portfolio</a>
+                <a href="#todo" class="btn btn-secondary">To-Do List</a>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Visual profil">
+              <div class="profile-card">
+                <div class="profile-image-wrap">
+                  <img src="profile-photo.jpg" alt="Foto profil Muhammad Hariri" />
+                </div>
+                <div class="profile-info">
+                  <h3>Tech Enthusiast</h3>
+                  <p>Web Developer • AI Explorer • Problem Solver</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tech-visual-section">
+        <div class="container">
+          <div class="tech-showcase">
+            <div class="tech-panel">
+              <div class="grid-lines"></div>
+              <div class="orb orb-one"></div>
+              <div class="orb orb-two"></div>
+              <div class="orb orb-three"></div>
+
+              <div class="tech-badge badge-ai">AI</div>
+              <div class="tech-badge badge-code">Code</div>
+              <div class="tech-badge badge-web">Web</div>
+
+              <div class="tech-chart">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="tech-meta">
+              <span class="section-tag">Digital Journey</span>
+              <h3>Belajar, berinovasi, dan terus berkembang dalam dunia teknologi</h3>
+              <p>
+                Saya terus mengeksplorasi teknologi terbaru, mulai dari pengembangan
+                web, pemrograman, hingga penggunaan AI untuk menciptakan solusi yang
+                lebih efektif dan bermanfaat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-tag">About Me</span>
+            <h2>Perkenalan singkat</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <p>
+                Saya adalah mahasiswa Teknologi Informasi yang memiliki minat besar
+                dalam dunia digital, khususnya teknologi, pemrograman, pengembangan
+                web, dan kecerdasan buatan. Saya menyukai proses belajar secara
+                bertahap dan terus mencoba hal baru untuk meningkatkan kemampuan
+                teknis serta kreativitas saya.
+              </p>
+            </div>
+
+            <div class="about-card accent-card">
+              <ul class="interest-list">
+                <li>Teknologi</li>
+                <li>Programming</li>
+                <li>Web Development</li>
+                <li>AI</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-tag">Skills</span>
+            <h2>Kemampuan yang dikuasai</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-icon">🌐</div>
+              <h3>HTML</h3>
+              <p>Membangun struktur halaman web yang rapi dan semantik.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">🎨</div>
+              <h3>CSS</h3>
+              <p>Mendesain tampilan modern, responsif, dan menarik.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <h3>JavaScript</h3>
+              <p>Mengembangkan interaksi website dan fitur dinamis.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">📊</div>
+              <h3>Microsoft Excel</h3>
+              <p>Mengolah data, membuat tabel, dan menganalisis informasi.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">📝</div>
+              <h3>Microsoft Word</h3>
+              <p>Membuat dokumen profesional, laporan, dan tugas akademik.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">🗃️</div>
+              <h3>Database</h3>
+              <p>Memahami struktur data dan pengelolaan informasi.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">🧩</div>
+              <h3>UI/UX</h3>
+              <p>Menyusun pengalaman pengguna yang nyaman dan intuitif.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">🤖</div>
+              <h3>AI Tools</h3>
+              <p>Memanfaatkan teknologi AI untuk meningkatkan produktivitas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-tag">Projects</span>
+            <h2>Proyek yang pernah dibuat</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-tag">Productivity</span>
+              </div>
+              <h3>To-Do List</h3>
+              <p>
+                Aplikasi pencatat tugas sederhana berbasis web dengan filter,
+                status selesai, dan penyimpanan lokal.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="#todo" class="project-link">Lihat Project</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-tag">Portfolio</span>
+              </div>
+              <h3>Website Portfolio</h3>
+              <p>
+                Landing page personal yang menampilkan profil, skill, proyek, dan
+                informasi kontak dengan desain modern.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="#portfolio" class="project-link">Lihat Project</a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-tag">Data</span>
+              </div>
+              <h3>Aplikasi Data Mahasiswa</h3>
+              <p>
+                Sistem pencatatan data mahasiswa yang membantu mengelola informasi
+                akademik dalam bentuk yang terstruktur.
+              </p>
+              <div class="project-tech">
+                <span>Excel</span>
+                <span>Database</span>
+                <span>UI/UX</span>
+              </div>
+              <a href="#contact" class="project-link">Lihat Project</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-tag">Contact</span>
+            <h2>Hubungi saya</h2>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:muhammadhariri@example.com">muhammadhariri@example.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/_yiy.06" target="_blank" rel="noreferrer">@_yiy.06</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/muhammadhariri" target="_blank" rel="noreferrer">github.com/muhammadhariri</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/muhammadhariri" target="_blank" rel="noreferrer">linkedin.com/in/muhammadhariri</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="todo" class="section todo-section">
+        <div class="container">
+          <div class="section-heading todo-heading">
+            <span class="section-tag">To-Do List</span>
+            <h2>Kelola tugas harian</h2>
+          </div>
+
+          <div class="todo-app">
+            <div class="todo-form-box">
+              <form id="todoForm" class="todo-form">
+                <label class="sr-only" for="todoInput">Masukkan tugas</label>
+                <input
+                  id="todoInput"
+                  type="text"
+                  placeholder="Masukkan tugas baru..."
+                  maxlength="120"
+                  autocomplete="off"
+                />
+                <button type="submit" class="btn btn-primary">Tambah Tugas</button>
+              </form>
+            </div>
+
+            <div class="todo-toolbar">
+              <div class="filter-group" aria-label="Filter tugas">
+                <button class="filter-btn active" data-filter="all" type="button">Semua</button>
+                <button class="filter-btn" data-filter="active" type="button">Belum Selesai</button>
+                <button class="filter-btn" data-filter="completed" type="button">Selesai</button>
+              </div>
+
+              <div class="todo-stats" aria-live="polite">
+                <span id="pendingCount">0 belum selesai</span>
+                <span id="completedCount">0 selesai</span>
+              </div>
+            </div>
+
+            <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+            <div id="emptyState" class="empty-state" hidden>
+              Belum ada tugas. Tambahkan tugas pertamamu hari ini.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 Muhammad Hariri</p>
+      </div>
+    </footer>
+  </body>
+</html>
