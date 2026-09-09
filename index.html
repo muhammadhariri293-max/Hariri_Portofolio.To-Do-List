@@ -97,31 +97,51 @@
         <div class="container">
           <div class="tech-showcase">
             <div class="tech-panel">
-              <div class="grid-lines"></div>
-              <div class="orb orb-one"></div>
-              <div class="orb orb-two"></div>
-              <div class="orb orb-three"></div>
-
-              <div class="tech-badge badge-ai">AI</div>
-              <div class="tech-badge badge-code">Code</div>
-              <div class="tech-badge badge-web">Web</div>
-
-              <div class="tech-chart">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+              <div class="journey-list">
+                <article class="journey-step">
+                  <span class="journey-marker">🎓</span>
+                  <div>
+                    <span class="journey-number">01</span>
+                    <h3>Mahasiswa Teknologi Informasi</h3>
+                  </div>
+                </article>
+                <article class="journey-step">
+                  <span class="journey-marker">💻</span>
+                  <div>
+                    <span class="journey-number">02</span>
+                    <h3>Belajar Web Development</h3>
+                  </div>
+                </article>
+                <article class="journey-step">
+                  <span class="journey-marker">📊</span>
+                  <div>
+                    <span class="journey-number">03</span>
+                    <h3>Belajar pengolahan data dan Microsoft Office</h3>
+                  </div>
+                </article>
+                <article class="journey-step">
+                  <span class="journey-marker">🤖</span>
+                  <div>
+                    <span class="journey-number">04</span>
+                    <h3>Mempelajari AI-assisted development</h3>
+                  </div>
+                </article>
+                <article class="journey-step">
+                  <span class="journey-marker">🚀</span>
+                  <div>
+                    <span class="journey-number">05</span>
+                    <h3>Mulai membangun aplikasi menggunakan AI</h3>
+                  </div>
+                </article>
               </div>
             </div>
 
             <div class="tech-meta">
               <span class="section-tag">Digital Journey</span>
-              <h3>Belajar, berinovasi, dan terus berkembang dalam dunia teknologi</h3>
+              <h3>Perjalanan belajar yang terus berkembang</h3>
               <p>
-                Saya terus mengeksplorasi teknologi terbaru, mulai dari pengembangan
-                web, pemrograman, hingga penggunaan AI untuk menciptakan solusi yang
-                lebih efektif dan bermanfaat.
+                Dari dasar teknologi hingga mulai membangun aplikasi, setiap tahap
+                menjadi bagian dari proses belajar sebagai mahasiswa Teknologi Informasi.
               </p>
             </div>
           </div>
@@ -137,21 +157,25 @@
 
           <div class="about-grid">
             <div class="about-card">
-              <p>
-                Saya adalah mahasiswa Teknologi Informasi yang memiliki minat besar
-                dalam dunia digital, khususnya teknologi, pemrograman, pengembangan
-                web, dan kecerdasan buatan. Saya menyukai proses belajar secara
-                bertahap dan terus mencoba hal baru untuk meningkatkan kemampuan
-                teknis serta kreativitas saya.
+              <p class="about-lead">
+                Saya Muhammad Hariri, mahasiswa Teknologi Informasi yang sedang
+                membangun pemahaman di bidang pengembangan software dan teknologi
+                digital.
+              </p>
+              <p class="about-detail">
+                Saya menikmati proses belajar bertahap, mencoba hal baru, dan
+                mengembangkan solusi web yang bermanfaat melalui pemrograman serta AI.
               </p>
             </div>
 
             <div class="about-card accent-card">
+              <p class="about-card-label">Fokus pembelajaran</p>
               <ul class="interest-list">
-                <li>Teknologi</li>
-                <li>Programming</li>
                 <li>Web Development</li>
+                <li>Programming</li>
                 <li>AI</li>
+                <li>Teknologi Digital</li>
+                <li>Software Development</li>
               </ul>
             </div>
           </div>
@@ -229,17 +253,19 @@
               <div class="project-top">
                 <span class="project-tag">Productivity</span>
               </div>
-              <h3>To-Do List</h3>
+              <h3>Portfolio + To-Do List</h3>
               <p>
-                Aplikasi pencatat tugas sederhana berbasis web dengan filter,
-                status selesai, dan penyimpanan lokal.
+                Website portfolio pribadi yang dilengkapi aplikasi To-Do List
+                untuk membantu mengelola tugas.
               </p>
               <div class="project-tech">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
+                <span>LocalStorage</span>
+                <span>AI-assisted development</span>
               </div>
-              <a href="#todo" class="project-link">Lihat Project</a>
+              <a href="./" class="project-link" aria-label="Buka Live Demo Portfolio dan To-Do List">Live Demo</a>
             </article>
 
             <article class="project-card">
@@ -248,8 +274,8 @@
               </div>
               <h3>Website Portfolio</h3>
               <p>
-                Landing page personal yang menampilkan profil, skill, proyek, dan
-                informasi kontak dengan desain modern.
+                Portfolio personal yang menampilkan profil, skill, proyek, dan
+                informasi kontak secara ringkas.
               </p>
               <div class="project-tech">
                 <span>HTML</span>
@@ -265,8 +291,8 @@
               </div>
               <h3>Aplikasi Data Mahasiswa</h3>
               <p>
-                Sistem pencatatan data mahasiswa yang membantu mengelola informasi
-                akademik dalam bentuk yang terstruktur.
+                Konsep aplikasi untuk mencatat dan menyusun informasi akademik
+                mahasiswa secara terstruktur.
               </p>
               <div class="project-tech">
                 <span>Excel</span>
@@ -325,8 +351,28 @@
                   maxlength="120"
                   autocomplete="off"
                 />
+                <label class="sr-only" for="todoPriority">Priority tugas</label>
+                <select id="todoPriority" class="todo-priority-select">
+                  <option value="high">🔴 High</option>
+                  <option value="medium" selected>🟡 Medium</option>
+                  <option value="low">🟢 Low</option>
+                </select>
+                <label class="sr-only" for="todoDeadline">Deadline tugas</label>
+                <input id="todoDeadline" class="todo-deadline-input" type="date" aria-label="Deadline tugas" />
                 <button type="submit" class="btn btn-primary">Tambah Tugas</button>
               </form>
+            </div>
+
+            <div class="todo-search-box">
+              <label class="sr-only" for="todoSearch">Cari tugas</label>
+              <input
+                id="todoSearch"
+                class="todo-search"
+                type="search"
+                placeholder="🔍 Cari tugas..."
+                autocomplete="off"
+                spellcheck="false"
+              />
             </div>
 
             <div class="todo-toolbar">
@@ -339,6 +385,29 @@
               <div class="todo-stats" aria-live="polite">
                 <span id="pendingCount">0 belum selesai</span>
                 <span id="completedCount">0 selesai</span>
+              </div>
+            </div>
+
+            <div class="todo-progress" aria-live="polite">
+              <div class="progress-heading">
+                <h3>Progress Tugas</h3>
+                <strong id="progressPercent">0%</strong>
+              </div>
+              <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Progress tugas"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              >
+                <div id="progressBar" class="progress-bar"></div>
+              </div>
+              <p id="progressSummary">0 dari 0 tugas selesai</p>
+              <div class="progress-stats">
+                <span>Total Tugas <strong id="totalCount">0</strong></span>
+                <span>Tugas Selesai <strong id="progressCompletedCount">0</strong></span>
+                <span>Tugas Belum Selesai <strong id="progressPendingCount">0</strong></span>
               </div>
             </div>
 
