@@ -242,6 +242,7 @@ navLinks.forEach((link) => {
     const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
+      history.pushState(null, '', targetId);
       targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
