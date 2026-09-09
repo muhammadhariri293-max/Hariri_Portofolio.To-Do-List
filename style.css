@@ -113,9 +113,64 @@ input {
 }
 
 .tech-panel {
-  min-height: 300px;
+  min-height: 420px;
   padding: 1.5rem;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(147, 197, 253, 0.08));
+}
+
+.journey-list {
+  position: relative;
+  display: grid;
+  gap: 0.85rem;
+  height: 100%;
+}
+
+.journey-list::before {
+  position: absolute;
+  top: 1.3rem;
+  bottom: 1.3rem;
+  left: 1.3rem;
+  width: 1px;
+  background: rgba(96, 165, 250, 0.4);
+  content: "";
+}
+
+.journey-step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 3.7rem;
+}
+
+.journey-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.78);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
+  font-size: 1.15rem;
+}
+
+.journey-number {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--primary-dark);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.journey-step h3 {
+  color: var(--secondary);
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  line-height: 1.3;
 }
 
 .grid-lines {
@@ -502,12 +557,31 @@ body.dark-theme .profile-card {
 }
 
 .about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1.8rem;
 }
 
 .about-card p {
   color: var(--muted);
   font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.about-card .about-detail {
+  margin-top: 0.9rem;
+  font-size: 0.96rem;
+}
+
+.about-card-label {
+  margin-bottom: 1rem;
+  color: var(--primary-dark) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.3 !important;
+  text-transform: uppercase;
 }
 
 .accent-card {
@@ -606,6 +680,7 @@ body.dark-theme .profile-card {
 
 .project-card p {
   color: var(--muted);
+  line-height: 1.6;
   flex: 1;
 }
 
@@ -623,6 +698,7 @@ body.dark-theme .profile-card {
   color: var(--secondary);
   font-size: 0.72rem;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .project-link {
@@ -671,7 +747,7 @@ body.dark-theme .profile-card {
 
 .todo-form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
   gap: 0.8rem;
 }
 
@@ -686,6 +762,56 @@ body.dark-theme .profile-card {
 }
 
 .todo-form input:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.todo-priority-select {
+  min-height: 54px;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 14px;
+  background: var(--input-bg);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.todo-priority-select:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.todo-deadline-input {
+  min-height: 54px;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 14px;
+  background: var(--input-bg);
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.todo-deadline-input:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.todo-search-box {
+  margin-top: 0.9rem;
+}
+
+.todo-search {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 14px;
+  background: var(--input-bg);
+  color: var(--secondary);
+}
+
+.todo-search:focus {
   outline: 2px solid rgba(59, 130, 246, 0.2);
   border-color: rgba(59, 130, 246, 0.5);
 }
@@ -730,6 +856,79 @@ body.dark-theme .profile-card {
   font-weight: 600;
 }
 
+.todo-progress {
+  margin-top: 1.25rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card-bg);
+}
+
+.progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.progress-heading h3 {
+  font-size: 1.1rem;
+}
+
+.progress-heading strong {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 0.7rem;
+  margin-top: 0.85rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  transition: width 0.3s ease;
+}
+
+.progress-summary {
+  margin-top: 0.65rem;
+}
+
+#progressSummary {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.progress-stats span {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.06);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.progress-stats strong {
+  color: var(--secondary);
+}
+
 .todo-list {
   list-style: none;
   display: grid;
@@ -767,6 +966,57 @@ body.dark-theme .profile-card {
   word-break: break-word;
   font-weight: 600;
   color: var(--secondary);
+}
+
+.todo-priority {
+  flex: 0 0 auto;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.todo-deadline {
+  flex: 0 1 auto;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.deadline-safe {
+  background: rgba(34, 197, 94, 0.12);
+  color: #166534;
+}
+
+.deadline-soon {
+  background: rgba(245, 158, 11, 0.14);
+  color: #9a5a00;
+}
+
+.deadline-today,
+.deadline-overdue {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.priority-high {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.priority-medium {
+  background: rgba(245, 158, 11, 0.14);
+  color: #9a5a00;
+}
+
+.priority-low {
+  background: rgba(34, 197, 94, 0.12);
+  color: #166534;
 }
 
 .todo-item.completed .todo-text {
@@ -1055,7 +1305,35 @@ body.dark-theme .profile-card {
   }
 
   .tech-panel {
-    min-height: 240px;
+    min-height: 0;
+    padding: 1.2rem;
+  }
+
+  .journey-list {
+    gap: 0.65rem;
+  }
+
+  .journey-step {
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+    gap: 0.65rem;
+    min-height: 3.4rem;
+  }
+
+  .journey-list::before {
+    top: 1.15rem;
+    bottom: 1.15rem;
+    left: 1.175rem;
+  }
+
+  .journey-marker {
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 1rem;
+  }
+
+  .journey-step h3 {
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
 
   .tech-meta,
@@ -1183,6 +1461,14 @@ body.dark-theme .profile-card {
     gap: 0.5rem;
   }
 
+  .todo-progress {
+    padding: 1rem;
+  }
+
+  .progress-stats {
+    grid-template-columns: 1fr;
+  }
+
   .project-tag,
   .project-tech span,
   .contact-label,
@@ -1198,6 +1484,24 @@ body.dark-theme .profile-card {
   .todo-item {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .todo-main {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .todo-text {
+    min-width: 0;
+    flex: 1 1 8rem;
+  }
+
+  .todo-priority,
+  .todo-deadline {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .todo-actions {
